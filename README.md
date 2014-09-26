@@ -42,3 +42,13 @@ Then run the application.
 bundle install
 bin/rails s
 ```
+
+### Installing Postgres app
+
+Download it [here](http://postgresapp.com/).
+
+### Run Tests
+
+```
+bin/rspec
+```
