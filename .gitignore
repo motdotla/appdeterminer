@@ -15,5 +15,3 @@
 /log/*.log
 /tmp
 
-.env*
-!.env.example
