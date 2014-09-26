@@ -9,6 +9,12 @@ bin/rails s
 
 Visit <http://localhost:3000>
 
+You can also run specs.
+
+```
+bin/rspec
+```
+
 ## Development Setup
 
 ```
