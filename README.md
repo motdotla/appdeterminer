@@ -40,6 +40,7 @@ Then run the application.
 
 ```
 bundle install
+bin/rake db:seed
 bin/rails s
 ```
 

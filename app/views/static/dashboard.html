@@ -1,3 +1,24 @@
 <h1>Dashboard</h1>
 
 You are at your dashboard.
+
+<h3>Matches</h3>
+<ul id="matches">
+</ul>
+
+<h3>No matches</h3>
+<ul id="nomatches">
+</ul>
+<script>
+  jQuery.getJSON('http://localhost:3000/apps', function(json) { 
+    historysniff.bind('match', function(result) {
+      jQuery("#matches").append("<li>"+result.name+"</li>");
+    });
+    historysniff.bind('nomatch', function(result) {
+      jQuery("#nomatches").append("<li>"+result.name+"</li>");
+    });
+
+    historysniff.ms_measurement = 2000;
+    historysniff.check(json.apps);
+  });
+</script>
