@@ -21,7 +21,7 @@ Welcome <%= session[:user] %>. You are at your dashboard.
       jQuery("#nomatches").append("<li>"+result.name+"</li>");
     });
 
-    historysniff.ms_measurement = 2000;
+    historysniff.ms_measurement = 50;
     historysniff.check(json.apps);
   });
 </script>
