@@ -10,9 +10,12 @@ Welcome <%= session[:user] %>. You are at your dashboard.
 <ul id="nomatches">
 </ul>
 <script>
-  jQuery.getJSON('http://localhost:3000/apps', function(json) { 
+  jQuery.getJSON('/apps', function(json) { 
     historysniff.bind('match', function(result) {
       jQuery("#matches").append("<li>"+result.name+"</li>");
+      jQuery.post( "/apps/add_by_name/"+result.name, function(resp) {
+        console.log(resp);
+      });
     });
     historysniff.bind('nomatch', function(result) {
       jQuery("#nomatches").append("<li>"+result.name+"</li>");

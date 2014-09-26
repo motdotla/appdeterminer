@@ -8,13 +8,17 @@ class StaticController < ApplicationController
 
   def logout
     session[:user] = nil
+    redirect_to "/"
   end
 
   def login_success
     Handshakejs.salt = "46d10310522e16f4a1c7"
     result = Handshakejs.validate({email: params[:email], hash: params[:hash]})
 
-    session[:user] = params[:email] if result
+    if result
+      session[:user] = params[:email]
+      User.find_or_create_by(email: params[:email])
+    end
 
     redirect_to '/dashboard'
   end

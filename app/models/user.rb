@@ -11,7 +11,11 @@ class User < ActiveRecord::Base
 
   def add_historysniffed_app_by_name(name)
     app = App.where({ name: name }).first
-    self.historysniffed_app_ids << app.id if app
-    self.save
+    if app
+      self.historysniffed_app_ids << app.id
+      self.save
+    else
+      false
+    end
   end
 end

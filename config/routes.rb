@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post '/login/success', to: 'static#login_success'
 
   get '/apps', to: 'apps#index'
+  post '/apps/add_by_name/:name', to: 'apps#add_by_name'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
