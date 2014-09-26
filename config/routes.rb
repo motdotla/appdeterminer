@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get '/', to: 'static#index'
+  get '/dashboard', to: 'static#dashboard'
+  post '/login/success', to: 'static#login_success'
+
   get '/apps', to: 'apps#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

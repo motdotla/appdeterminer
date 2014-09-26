@@ -1,0 +1,12 @@
+<h1>Login</h1>
+
+<script src="https://rawgit.com/handshakejs/handshakejs-script/master/build/handshake.js" data-app_name="appdeterminer" data-root_url="https://handshakejs.herokuapp.com"></script>
+
+<script>
+  handshake.script.addEventListener('handshake:login_confirm', function(e) {
+    console.log(e.data);
+    $.post("/login/success", {email: e.data.identity.email, hash: e.data.identity.hash}, function(data) {
+      window.location.href = "/dashboard";
+    });    
+  }, false); 
+</script>
