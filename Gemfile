@@ -41,5 +41,7 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem 'dotenv'
+  gem 'factory_girl_rails'
+  gem 'pry'
   gem 'rspec-rails'
 end

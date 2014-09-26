@@ -18,7 +18,7 @@ development:
 test: &TEST
   adapter: postgresql
   encoding: utf8
-  database: project_test
+  database: appdeterminer_test
   pool: 5
   username: 
   password:

@@ -50,5 +50,6 @@ Download it [here](http://postgresapp.com/).
 ### Run Tests
 
 ```
+bin/rake db:create db:migrate
 bin/rspec
 ```
