@@ -41,6 +41,7 @@ gem 'spring',        group: :development
 
 
 gem 'handshakejs'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'dotenv'
