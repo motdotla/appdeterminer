@@ -24,9 +24,4 @@ class StaticController < ApplicationController
 
     redirect_to '/dashboard'
   end
-
-
-  def static_params
-    params.require(static).permit(:email, :hash)
-  end
 end
