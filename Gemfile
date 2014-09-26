@@ -39,6 +39,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 
+gem 'handshakejs'
+
 group :development, :test do
   gem 'dotenv'
   gem 'factory_girl_rails'

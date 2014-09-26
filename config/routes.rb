@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get '/', to: 'static#index'
   get '/dashboard', to: 'static#dashboard'
+  get '/logout', to: 'static#logout'
   post '/login/success', to: 'static#login_success'
 
   get '/apps', to: 'apps#index'
