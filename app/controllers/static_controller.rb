@@ -1,4 +1,6 @@
 class StaticController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def index
   end
 
@@ -21,5 +23,10 @@ class StaticController < ApplicationController
     end
 
     redirect_to '/dashboard'
+  end
+
+
+  def static_params
+    params.require(static).permit(:email, :hash)
   end
 end
