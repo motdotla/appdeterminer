@@ -1,5 +1,14 @@
 # appdeterminer
 
+```
+bundle install
+bin/rake db:migrate
+bin/rake db:seed
+bin/rails s
+```
+
+Visit <http://localhost:3000>
+
 ## Development Setup
 
 ```
